@@ -38,15 +38,15 @@ public struct NavigationContainer<Content: View & CustomNavigation>: View, Custo
                     .transition(transitionForDirection(navigationViewModel.animationDirection))
             }
         }
-        .animation(.linear, value: navigationViewModel.currentScreen)
+        .animation(.easeIn, value: navigationViewModel.currentScreen)
     }
     
     private func transitionForDirection(_ direction: AnimationDirection) -> AnyTransition {
         switch direction {
         case .forward:
-            return .move(edge: .trailing).combined(with: .opacity)
+            return .move(edge: .leading).combined(with: .opacity.combined(with: .opacity))
         case .backward:
-            return .move(edge: .leading).combined(with: .opacity)
+            return .move(edge: .trailing).combined(with: .opacity)
         case .none:
             return .move(edge: .leading).combined(with: .opacity)
         }
