@@ -17,7 +17,7 @@ To install it, add the following dependency to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/your-repo/CustomNavigationStack.git", from: "1.0.0")
+    .package(url: "https://github.com/laukhin-alex/CustomNavigationStack.git", from: "1.0.0")
 ]
 ```
 
