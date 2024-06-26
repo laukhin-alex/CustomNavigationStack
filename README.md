@@ -46,6 +46,7 @@ let package = Package(
 ```swift
 import CustomNavigationStack
 ```
+
 ### Setting Up the Navigation
 
 To set up the navigation stack, follow these steps:
