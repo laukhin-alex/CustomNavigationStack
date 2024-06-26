@@ -13,6 +13,9 @@ let package = Package(
             name: "CustomNavigationStack",
             targets: ["CustomNavigationStack"]),
     ],
+    dependencies: [
+            .package(url: "https://github.com/laukhin-alex/CustomNavigationStack.git", from: "1.0.2")
+        ],
     targets: [
         .target(
             name: "CustomNavigationStack",

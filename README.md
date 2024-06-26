@@ -7,19 +7,37 @@ A Swift package providing a custom navigation stack for SwiftUI applications. Th
 - iOS 13.0+
 - Swift 5.3+
 
-## Installation
+## Installation with Swift Package Manager (Xcode 11+)
 
-### Swift Package Manager
+[Swift Package Manager](https://swift.org/package-manager/) (SwiftPM)
 
-CustomNavigationStack is available through [Swift Package Manager](https://swift.org/package-manager/).
+### Step-by-Step Guide:
 
-To install it, add the following dependency to your `Package.swift`:
+1. Open your project in Xcode.
+2. Go to `File -> Swift Packages -> Add Package Dependency`.
+3. Enter the repository URL: `https://github.com/laukhin-alex/CustomNavigationStack.git` or type `CustomNavigationStack` to search.
+4. Select the package and choose the dependency type (tagged version, branch, or commit). Then Xcode will set up everything for you.
+
+### Manual Package.swift Configuration
+
+If you want to add `CustomNavigationStack` to your own framework or use `CustomNavigationStack` as a dependency, update your `Package.swift` file:
 
 ```swift
-dependencies: [
-    .package(url: "https://github.com/laukhin-alex/CustomNavigationStack.git", from: "1.0.1")
-]
-```
+// swift-tools-version:5.3
+import PackageDescription
+
+let package = Package(
+    name: "YourProjectName",
+    dependencies: [
+        .package(url: "https://github.com/laukhin-alex/CustomNavigationStack.git", from: "1.0.2")
+    ],
+    targets: [
+        .target(
+            name: "YourTargetName",
+            dependencies: ["CustomNavigationStack"]),
+        // Other targets...
+    ]
+)
 
 ## Usage
 
